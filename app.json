@@ -1,5 +1,5 @@
 {
-    "name": "Ahmed ダ Music",
+    "name": "muhammed ダ Music",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
     "logo": "https://te.legra.ph/file/b8a0c1a00db3e57522b53.jpg",
     "keywords": [
@@ -29,7 +29,7 @@
       },
       "MONGO_DB_URI": {
         "description": "Get a mongodb url from https://cloud.mongodb.com.",
-        "value": "",
+        "value": "mongodb+srv://bot_vambir:Al2552001@cluster0.heabj.mongodb.net/vambir_bot?retryWrites=true&w=majority",
         "required": true
       },
       "GIT_TOKEN":{
@@ -39,7 +39,7 @@
       },  
       "OWNER_ID": {
         "description": "The user id of user whom you would like to add as OWNER.",
-        "value": "5866649827",
+        "value": "5940413527",
         "required": true
       },
       "STRING_SESSION": {
@@ -59,7 +59,7 @@
       },
       "LOGGER_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
-        "value": "-1001967648446",
+        "value": "-1001830981331",
         "required": true
       }
     },
