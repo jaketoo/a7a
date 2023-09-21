@@ -2,16 +2,16 @@ import asyncio
 from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.raw import types
-from AnonX import app
+from AnonXMusic import app
 import random
 from datetime import datetime
 import requests
 import pytz
-from AnonX.core.call import Anon
+from AnonXMusic.core.call import Anon
 from pytgcalls import PyTgCalls, StreamType
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
-from AnonX.core.call import Anon
-from AnonX.utils.database import *
+from AnonXMusic.core.call import Anon
+from AnonXMusic.utils.database import *
 from pytgcalls.exceptions import (NoActiveGroupCall,TelegramServerError,AlreadyJoinedError)
 from pyrogram.errors import (
     ChatAdminRequired,
