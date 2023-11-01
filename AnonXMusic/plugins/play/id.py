@@ -15,7 +15,7 @@ async def iddlock(client, message):
       iddof.append(message.chat.id)
       return await message.reply_text("تم تعطيل الايدي بنجاح ✅🔒")
    else:
-      return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
+      return await message.reply_text("لازم تكون ادمن يبني علشان اسمع كلامك")
 
 @app.on_message(filters.command(["فتح الايدي","تفعيل الايدي"], ""))
 async def iddopen(client, message):
@@ -26,7 +26,7 @@ async def iddopen(client, message):
       iddof.remove(message.chat.id)
       return await message.reply_text("تم فتح الايدي بنجاح ✅🔓")
    else:
-      return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
+      return await message.reply_text("لازم تكون ادمن يبني علشان اسمع كلامك")
 
 
 
@@ -61,7 +61,7 @@ async def lllock(client, message):
       iddof.append(message.chat.id)
       return await message.reply_text(" تم تعطيل جمالي بنجاح✅🔒")
    else:
-      return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
+      return await message.reply_text("لازم تكون ادمن يبني علشان اسمع كلامك")
 
 @app.on_message(filters.command(["فتح جمالي","تفعيل جمالي"], ""))
 async def idljjopen(client, message):
@@ -72,7 +72,7 @@ async def idljjopen(client, message):
       iddof.remove(message.chat.id)
       return await message.reply_text("تم فتح جمالي بنجاح ✅🔓")
    else:
-      return await message.reply_text("لازم تكون ادمن يشخه علشان اسمع كلامك")
+      return await message.reply_text("لازم تكون ادمن يبني علشان اسمع كلامك")
 
 
 
