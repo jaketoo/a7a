@@ -77,7 +77,7 @@ async def deev(client: Client, message: Message):
 
 
 
-@app.on_message(filters.command(["المطور", "مطور","《مطور البوت》"], ""), group=173) 
+@app.on_message(filters.command(["", "مطور","《مطور البوت》"], ""), group=173) 
 async def dev(client: Client, message: Message):
      bot_username = client.me.username
      user = await client.get_chat(OWNER_ID)
