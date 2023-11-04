@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 from strings import get_command
 from strings.filters import command
 from pyrogram.types import Message
-from YukkiMusic import app
+from AnonXMusic import app
 
 @app.on_message(command(["الرابط","/link"])
                 & ~filters.bot 
