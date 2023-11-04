@@ -49,7 +49,7 @@ def get_file_id(msg: Message):
 
 @app.on_message(filters.command(["المطور", "《مطور السورس》", "چاكو", "صاحب السورس", "يا جاكو"], ""), group=73) 
 async def deev(client: Client, message: Message):
-     user = await client.get_chat(chat_id="programer_senzir")
+     user = await client.get_chat(chat_id="mvhmed")
      name = user.first_name
      username = user.username 
      bio = user.bio
@@ -60,13 +60,13 @@ async def deev(client: Client, message: Message):
      title = message.chat.title if message.chat.title else message.chat.first_name
      chat_title = f"User : {message.from_user.mention} \nChat Name : {title}" if message.from_user else f"Chat Name : {message.chat.title}"
      try:
-      await client.send_message(username, f"**هناك شخص بالحاجه اليك عزيزي المطور**\n{chat_title}\nChat Id : `{message.chat.id}`",
+      await client.send_message(username, f"هناك شخص بالحاجه اليك عزيزي المطور\n{chat_title}\nChat Id : `{message.chat.id}`",
       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{title}", url=f"{link}")]]))
      except:
        pass
      await message.reply_photo(
      photo=photo,
-     caption=f"**Developer Name : {name}** \n**Devloper Username : @{username}**\n**{bio}**",
+     caption=f"🕷️ Developer Name : {name} \n🕷️ Devloper Username : @{username}\n🕷️ {bio}",
      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{name}", user_id=f"{user_id}")]]))
      try:
        os.remove(photo)
@@ -91,13 +91,13 @@ async def dev(client: Client, message: Message):
      title = message.chat.title if message.chat.title else message.chat.first_name
      chat_title = f"User : {message.from_user.mention} \nChat Name : {title}" if message.from_user else f"Chat Name : {message.chat.title}"
      try:
-      await client.send_message(username, f"**هناك شخص بالحاجه اليك عزيزي المطور الأساسي**\n{chat_title}\nChat Id : `{message.chat.id}`",
+      await client.send_message(username, f"هناك شخص بالحاجه اليك عزيزي المطور الأساسي\n{chat_title}\nChat Id : `{message.chat.id}`",
       reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{title}", url=f"{link}")]]))
      except:
         pass
      await message.reply_photo(
      photo=photo,
-     caption=f"**Developer Name : {name}** \n**Devloper Username : @{username}**\n**{bio}**",
+     caption=f"🕷️ Developer Name : {name} \n🕷️ Devloper Username : @{username}\n🕷️ {bio}",
      reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{name}", user_id=f"{user_id}")]]))
      try:
        os.remove(photo)
@@ -132,7 +132,7 @@ async def welcome(client: Client, message):
          await client.set_administrator_title(chat_id, user_id, ": جاكو:")
       except:
         pass
-      return await message.reply_text(f"**انضم المطور چـاكـو  الي هنا الان [.](https://t.me/mvhmed)⚡**\n\n**يرجي من الاعضاء احترام وجوده 🥷**")
+      return await message.reply_text(f"انضم المطور چـاكـو  الي هنا الان [.](https://t.me/mvhmed)⚡\n\nيرجي من الاعضاء احترام وجوده 🥷")
     dev = await get_OWNER_ID(bot_username)
     if message.new_chat_members[0].id == OWNER_ID:
       try:
@@ -140,7 +140,7 @@ async def welcome(client: Client, message):
          await client.set_administrator_title(message.chat.id, message.new_chat_members[0].id, ": مطور البوت :")
       except:
         pass
-      return await message.reply_text(f"**انضم مالك البوت الي هنا ❤️**\n**{message.new_chat_members[0].mention} : مرحبا بك **")
+      return await message.reply_text(f"انضم مالك البوت الي هنا ❤️\n{message.new_chat_members[0].mention} : مرحبا بك ")
     if message.new_chat_members[0].id == bot.id:
       photo = bot.photo.big_file_id
       photo = await client.download_media(photo)
@@ -149,7 +149,7 @@ async def welcome(client: Client, message):
       ch = await get_channel(bot_username)
       gr = await get_group(bot_username)
       button = [[InlineKeyboardButton(text="ᴄʜᴀɴᴇᴇʟ", url=f"{ch}"), InlineKeyboardButton(text="ɢʀᴏụᴘ", url=f"{gr}")], [InlineKeyboardButton(text=f"{nn}", user_id=f"{dev}")],  [InlineKeyboardButton(text="ᴀᴅᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ʏᴏụʀ ɢʀᴏụᴘ ⌯", url=f"https://t.me/{bot.username}?startgroup=True")]]
-      await message.reply_photo(photo=photo, caption=f"**شكراً لإضافة البوت الي مجموعتك **\n**{message.chat.title} : تم تفعيل البوت في مجموعتك **\n**يمكنك الان تشغيل ما تريده .⚡ **\n\n**Channel Bot : {ch}**", reply_markup=InlineKeyboardMarkup(button))
+      await message.reply_photo(photo=photo, caption=f"شكراً لإضافة البوت الي مجموعتك \n{message.chat.title} : تم تفعيل البوت في مجموعتك \nيمكنك الان تشغيل ما تريده .⚡ \n\n**Channel Bot : {ch}", reply_markup=InlineKeyboardMarkup(button))
       logger = await get_dev(bot_username)
       await add_served_chat(client, chat_id)
       chats = len(await get_served_chats(client))
