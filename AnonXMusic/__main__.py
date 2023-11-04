@@ -9,10 +9,9 @@ from AnonXMusic import LOGGER, app, userbot
 from AnonXMusic.core.call import Anony
 from AnonXMusic.misc import sudo
 from AnonXMusic.plugins import ALL_MODULES
-from AnonXMusic.plugins import azan
 from AnonXMusic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
-
+from AnonXMusic.plugins import azan
 
 async def init():
     if (
