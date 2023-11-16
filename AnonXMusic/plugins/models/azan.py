@@ -5,7 +5,6 @@ from pyrogram.raw import types
 from AnonXMusic import app
 from datetime import datetime
 import requests
-import pytz
 from AnonXMusic.core.call import Anony
 from pytgcalls import PyTgCalls, StreamType
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
