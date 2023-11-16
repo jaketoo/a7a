@@ -9,7 +9,7 @@ import pytz
 from AnonXMusic.core.call import Anony
 from pytgcalls import PyTgCalls, StreamType
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
-from AnonXMusic.utils.database import *
+from AnonXMusic.utils.database import
 from pytgcalls.exceptions import NoActiveGroupCall, TelegramServerError, AlreadyJoinedError
 from pyrogram.errors import ChatAdminRequired, UserAlreadyParticipant, UserNotParticipant
 
