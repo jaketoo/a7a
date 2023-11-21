@@ -3,7 +3,7 @@ import random
 from SedthonMusic.misc import SUDOERS
 from pyrogram.types import (Message,InlineKeyboardButton,InlineKeyboardMarkup,CallbackQuery,ChatPrivileges)
 from pyrogram import filters, Client
-from SedthonMusic import app
+from AnonXMusic import app
 from config import *
 
 bot_name = {}
