@@ -1,6 +1,6 @@
 import asyncio
 import random
-from SedthonMusic.misc import SUDOERS
+from AnonXMusic.misc import SUDOERS
 from pyrogram.types import (Message,InlineKeyboardButton,InlineKeyboardMarkup,CallbackQuery,ChatPrivileges)
 from pyrogram import filters, Client
 from AnonXMusic import app
