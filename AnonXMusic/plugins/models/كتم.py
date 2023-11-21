@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from pyrogram.enums import ChatMemberStatus
-from SedthonMusic import app
+from AnonXMusic import app
 
 
 admin, owner = ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER
