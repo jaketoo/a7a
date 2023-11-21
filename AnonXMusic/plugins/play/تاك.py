@@ -47,7 +47,7 @@ async def nummmm(client: app, message):
     
     chek = await client.get_chat_member(message.chat.id, message.from_user.id)
     if not chek.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
-        await message.reply("عذرًا، هذا الأمر مخصص لمشرفي المجموعة فقط.")
+        await message.reply("تاك معطل حاليا.")
         return
     
     await message.reply_text("جاري بدء المنشن، لإيقاف الأمر اضغط /cancel.")
