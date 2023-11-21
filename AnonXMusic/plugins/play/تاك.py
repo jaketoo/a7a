@@ -15,7 +15,6 @@ from pyrogram.errors import FloodWait
 
 
 
-app = Client("my_account")
 
 @app.on_message(filters.text & filters.group)
 async def reply_to_owner(client, message):
