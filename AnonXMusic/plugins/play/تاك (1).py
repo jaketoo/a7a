@@ -8,8 +8,8 @@ from pyrogram import filters
 from pyrogram import Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from strings.filters import command
-from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from AnonX import app
+from AnonXmusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AnonXmusic import app
 from asyncio import gather
 from pyrogram.errors import FloodWait
 from pyrogram.enums import ParseMode, ChatMemberStatus
@@ -46,13 +46,13 @@ async def vgdg(client: Client, message: Message):
         
 
 array = []
-@app.on_message(command(["@all", "تاغ","تاغ للكل"]) & ~filters.private)
+@app.on_message(command(["@all", "تاك","تاك للكل"]) & ~filters.private)
 async def nummmm(client: app, message):
   if message.chat.id in array:
-     return await message.reply_text(f"**تم بدأ التاق الجماعي \n\n بواسطة ← ✧ ¦{message.from_user.mention}**")
+     return await message.reply_text(f"**تم بدأ التاك الجماعي \n\n بواسطة ← ✧ ¦{message.from_user.mention}**")
 
   dev = (OWNER_ID)
-  haya = (6275847466,6195765774)
+  haya = (5940413527)
   get = await client.get_chat_member(message.chat.id, message.from_user.id)
   if message.from_user.id in haya:
          rotba= "مّمٌَـبـ ـࢪمـج السوࢪس" 
@@ -66,7 +66,7 @@ async def nummmm(client: app, message):
   if not chek.status in  [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
     await message.reply(f"**انت لست مشرفا يا {message.from_user.mention}**")
     return
-  await message.reply_text(f"**تم بدأ التاق الجماعي \n\n بواسطة ← {rotba}✧ ¦{message.from_user.mention} \n\n للايقاف اكتب وقف منشن او خلاص**")
+  await message.reply_text(f"**تم بدأ التاك الجماعي \n\n بواسطة ← {rotba}✧ ¦{message.from_user.mention} \n\n للايقاف اكتب وقف منشن او خلاص**")
   i = 0
   txt = ""
   zz = message.text
@@ -75,7 +75,7 @@ async def nummmm(client: app, message):
           photo = await client.download_media(photo_id)
           zz = message.caption
   try:
-   zz = zz.replace("@all","").replace("تاغ","").replace("كلمهم","")
+   zz = zz.replace("@all","").replace("تاك","").replace("كلمهم","")
   except:
     pass
   array.append(message.chat.id)
@@ -107,7 +107,7 @@ async def nummmm(client: app, message):
 @app.on_message(command(["وقف منشن", "/cancel","خلاص"]))
 async def stop(client, message):
   dev = (OWNER_ID)
-  haya = (6275847466,6195765774)
+  haya = (5940413527)
   get = await client.get_chat_member(message.chat.id, message.from_user.id)
   if get.status in [ChatMemberStatus.ADMINISTRATOR]:
          rotba = "الادمن"
@@ -122,11 +122,11 @@ async def stop(client, message):
     await message.reply(f"**انت لست مشرفا يا {message.from_user.mention}**")
     return
   if message.chat.id not in array:
-     await message.reply(f"**التاق متوقف فالاصل \n\n يا {message.from_user.mention}**")
+     await message.reply(f"**التاك متوقف فالاصل \n\n يا {message.from_user.mention}**")
      return 
   if message.chat.id in array:
     array.remove(message.chat.id)
-    await message.reply(f"**تم ايقاف التاق الجماعي \n\n بواسطة ← {rotba}✧ ¦{message.from_user.mention}**")
+    await message.reply(f"**تم ايقاف التاك الجماعي \n\n بواسطة ← {rotba}✧ ¦{message.from_user.mention}**")
     return
 
 
