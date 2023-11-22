@@ -1,6 +1,5 @@
 import asyncio
 import os
-from config import OWNER_ID
 import time
 import requests
 import aiohttp
@@ -8,8 +7,8 @@ from pyrogram import filters
 from pyrogram import Client
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from strings.filters import command
-from AnonXmusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from AnonXmusic import app
+from AnonXMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from AnonXMusic import app
 from asyncio import gather
 from pyrogram.errors import FloodWait
 from pyrogram.enums import ParseMode, ChatMemberStatus
