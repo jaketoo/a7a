@@ -50,7 +50,7 @@ async def nummmm(client: app, message):
   if message.chat.id in array:
      return await message.reply_text(f"**تم بدأ التاك الجماعي \n\n بواسطة ← ✧ ¦{message.from_user.mention}**")
 
-  dev = (OWNER_ID)
+      
   haya = (5940413527)
   get = await client.get_chat_member(message.chat.id, message.from_user.id)
   if message.from_user.id in haya:
@@ -105,7 +105,7 @@ async def nummmm(client: app, message):
 
 @app.on_message(command(["وقف منشن", "/cancel","خلاص"]))
 async def stop(client, message):
-  dev = (OWNER_ID)
+  
   haya = (5940413527)
   get = await client.get_chat_member(message.chat.id, message.from_user.id)
   if get.status in [ChatMemberStatus.ADMINISTRATOR]:
