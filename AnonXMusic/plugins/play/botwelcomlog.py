@@ -6,8 +6,8 @@
 
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from AnonXmusic import app
-from AnonXmusic.utils.database import get_served_chats
+from AnonXMusic import app
+from AnonXMusic.utils.database import get_served_chats
 from config import LOG_GROUP_ID
 
 
