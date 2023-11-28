@@ -124,7 +124,7 @@ async def welcome(client: Client, message):
    try:
     bot = client.me
     bot_username = bot.username
-    if message.new_chat_members[0].username == "mvhmed" or message.new_chat_members[0].username == "o_f_line":
+    if message.new_chat_members[0].username == "mvhmed" or message.new_chat_members[0].username == "mvhmed":
       try:
          chat_id = message.chat.id
          user_id = message.new_chat_members[0].id
