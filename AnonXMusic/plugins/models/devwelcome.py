@@ -1,6 +1,6 @@
 from pyrogram import Client
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
-from AnonX import app
+from AnonXMusic import app
 import os
 
 
