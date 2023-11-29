@@ -58,13 +58,19 @@ f"نوࢪ الڪࢪوب 🥀 {message.from_user.mention}",
 f"شعشعت يا قلب قلبي 🤍🧚🏼‍♂️ {message.from_user.mention}",]
     bar = random.choice(selections)
     await message.reply_text(bar)
+@app.on_message(command(["عادل"]) & filters.group)
+async def bottttt(client, message):
+    selections = [دا باندا بيتناقص فكك منه {message.from_user.mention}",
+f"قاصدك اكبر باندا في الجروب؟{message.from_user.mention}",]
+    bar = random.choice(selections)
+    await message.reply_text(bar)
 @app.on_message(command(["منتحاسب"]) & filters.group)
 async def bottttt(client, message):
     selections = [f"خفت تࢪا 😹💔 {message.from_user.mention}",
 f"يعني هلأ أبڪي؟ {message.from_user.mention}",]
     bar = random.choice(selections)
     await message.reply_text(bar)
-
+    
 @app.on_message(command([f"غنيلي"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(3,122)
