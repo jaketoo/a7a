@@ -30,4 +30,4 @@ async def Italymusic(client: Client, message: Message):
         print(e)
         rank = "مش عرفنلو مله ده"
     async for photo in client.get_chat_photos("me", limit=1):
-                    await message.reply_photo(photo.file_id,       caption=f"""**Hi {star}. \n\nMy Name iS {bot_name}. **\n\n**A Strong Telegram Bot To Play Music & Video iN The Voice Chat.**\n\n**Just Add Me To Your Group And Send** /help .""", reply_markup=keyboard)
+                    await message.reply_photo(photo.file_id,       caption=f"""Hi {star}. \n\nMy Name iS {bot_name}. \n\nA Strong Telegram Bot To Play Music & Video iN The Voice Chat.\n\nJust Add Me To Your Group And Send /help .""", reply_markup=keyboard)
