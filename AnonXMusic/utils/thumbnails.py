@@ -3,7 +3,6 @@ import re
 import textwrap
 import aiofiles
 import aiohttp
-import numpy as np
 import random
 from PIL import Image, ImageChops, ImageOps, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 from youtubesearchpython.__future__ import VideosSearch
