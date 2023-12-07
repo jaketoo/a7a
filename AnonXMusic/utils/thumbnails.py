@@ -1,13 +1,13 @@
 import os
 import re
-import textwrap
 
 import aiofiles
 import aiohttp
-from PIL import (Image, ImageDraw, ImageEnhance, ImageFilter,
-                 ImageFont, ImageOps)
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
+from unidecode import unidecode
 from youtubesearchpython.__future__ import VideosSearch
 
+from AnonXMusic import app
 from config import YOUTUBE_IMG_URL
 
 
