@@ -1,12 +1,12 @@
 import os
 import re
-import textwrap
+
 import aiofiles
 import aiohttp
-import random
-from PIL import Image, ImageChops, ImageOps, ImageDraw, ImageEnhance, ImageFilter, ImageFont
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
+from unidecode import unidecode
 from youtubesearchpython.__future__ import VideosSearch
-from AnonXMusic.resource import thumbs, color
+
 from AnonXMusic import app
 from config import YOUTUBE_IMG_URL
 
