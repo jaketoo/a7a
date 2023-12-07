@@ -12,9 +12,8 @@ iddof = []
     command(["قفل الايدي","تعطيل الايدي"])
     & filters.group
 )
-async def iddopen(client: Client, message):
-   get = await client.get_chat_member(message.chat.id, message.from_user.id)
-   if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
+async for m in app.get_chat_members(message.chat.id, filter=enums.ChatMembersFilter.ADMINISTRATORS):
+         if m.status == ChatMemberStatus.OWNER:
       if not message.chat.id in iddof:
         return await message.reply_text("**♪ الايدي مفعل من قبل  💎 .**")
       iddof.remove(message.chat.id)
