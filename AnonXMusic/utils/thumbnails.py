@@ -81,35 +81,53 @@ async def get_thumb(videoid):
             font=arial,
         )
         draw.text(
-            (57, 600),
-            clear(title),
-            (255, 255, 255),
-            font=font,
-        )
-        draw.line(
-            [(55, 660), (1220, 660)],
+            (600, 150),
+            "JAKOO PlAYiNg",
             fill="white",
-            width=5,
-            joint="curve",
+            stroke_width=2,
+            stroke_fill="white",
+            font=font2,
         )
-        draw.ellipse(
-            [(918, 648), (942, 672)],
-            outline="white",
-            fill="white",
-            width=15,
-        )
+        for line in para:
+            if j == 1:
+                j += 1
+                draw.text(
+                    (600, 340),
+                    f"{line}",
+                    fill="white",
+                    stroke_width=1,
+                    stroke_fill="white",
+                    font=font,
+                )
+            if j == 0:
+                j += 1
+                draw.text(
+                    (600, 280),
+                    f"{line}",
+                    fill="white",
+                    stroke_width=1,
+                    stroke_fill="white",
+                    font=font,
+                )
+
         draw.text(
-            (36, 685),
-            "00:00",
+            (600, 450),
+            f"Views : {views[:23]}",
             (255, 255, 255),
             font=arial,
         )
         draw.text(
-            (1185, 685),
-            f"{duration[:23]}",
+            (600, 500),
+            f"Duration : {duration[:23]} Mins",
             (255, 255, 255),
             font=arial,
         )
+        draw.text(
+            (600, 550),
+            f"Channel : {channel}",
+            (255, 255, 255),
+            font=arial,
+    )
         try:
             os.remove(f"cache/thumb{videoid}.png")
         except:
