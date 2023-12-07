@@ -12,15 +12,15 @@ iddof = []
     command(["قفل الايدي","تعطيل الايدي"])
     & filters.group
 )
-async def iddlock(client, message):
-   get = await app.get_chat_member(message.chat.id, message.from_user.id)
+async def iddopen(client: Client, message):
+   get = await client.get_chat_member(message.chat.id, message.from_user.id)
    if get.status in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
-      if message.chat.id in iddof:
-        return await message.reply_text("تم معطل من قبل \n√")
-      iddof.append(message.chat.id)
-      return await message.reply_text("تم تعطيل الايدي بنجاح √")
+      if not message.chat.id in iddof:
+        return await message.reply_text("**♪ الايدي مفعل من قبل  💎 .**")
+      iddof.remove(message.chat.id)
+      return await message.reply_text("**♪ تم تفعيل الايدي بنجاح  💎 .**")
    else:
-      return await message.reply_text("لازم تكون ادمن \n√")
+      return await message.reply_text("**♪ عذرا عزيزي هذا الامر للادمن الجروب فقط  💎 .**")
 
 @app.on_message(
     command(["فتح الايدي","تفعيل الايدي"])
