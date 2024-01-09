@@ -185,18 +185,19 @@ async def stream(
                 forceplay=forceplay,
             )
             img = await get_thumb(vidid)
-            button = stream_markup(_, chat_id)
-            run = await app.send_photo(
+             button = [[InlineKeyboardButton(text="ᎬŃᎠ", callback_data=f"ADMIN Stop|{chat_id}"), InlineKeyboardButton(text="ᎡᎬՏႮᎷᎬ", callback_data=f"ADMIN Resume|{chat_id}"), InlineKeyboardButton(text="ᏢᎪႮՏᎬ", callback_data=f"ADMIN Pause|{chat_id}")], [InlineKeyboardButton(text="ᏟᎻᎪΝΝᎬᏞ", url=f"https://t.me/Mvhmed"), InlineKeyboardButton(text="ᏀᎡϴႮᏢ", url=f"https://t.me/mvhmed")], [InlineKeyboardButton(text=f"𝙈𝙪𝙝𝙖𝙢𝙢𝙚𝙙 𝙆𝙝𝙖𝙡𝙞𝙙", url=f"https://t.me/mvhmed")], [InlineKeyboardButton(text="اضف البوت الي مجموعتك او قناتك ⚡️", url=f"https://t.me/Gor_Genabot?startgroup=True")]]
+             men = user_name
+             run = await app.send_photo(
                 original_chat_id,
                 photo=img,
                 caption=_["stream_1"].format(
+                    men,
                     f"https://t.me/{app.username}?start=info_{vidid}",
-                    title[:23],
-                    duration_min,
-                    user_name,
                 ),
                 reply_markup=InlineKeyboardMarkup(button),
-            )
+             )
+            except Exception as a:
+                print(a)
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "stream"
     elif streamtype == "soundcloud":
