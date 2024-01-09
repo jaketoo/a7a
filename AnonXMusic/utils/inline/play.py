@@ -2,7 +2,7 @@ import math
 
 from pyrogram.types import InlineKeyboardButton
 
-from AnonXMusic.utils.formatters import time_to_seconds
+from AnonXMusic.utils.formatters
 
 
 def track_markup(_, videoid, user_id, channel, fplay):
