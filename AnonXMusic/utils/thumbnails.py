@@ -61,7 +61,7 @@ async def get_thumb(videoid):
         youtube = Image.open(f"cache/thumb{videoid}.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
-        background = image2.filter(filter=ImageFilter.BoxBlur(30))
+        background = image2.filter(filter=ImageFilter.BoxBlur(5))
         enhancer = ImageEnhance.Brightness(background)
         background = enhancer.enhance(0.6)
         Xcenter = youtube.width / 2
@@ -83,7 +83,7 @@ async def get_thumb(videoid):
         j = 0
         draw.text(
             (600, 150),
-            "STARTED PLAYING",
+            "JAKOO PLAYING",
             fill="white",
             stroke_width=2,
             stroke_fill="white",
